@@ -1,7 +1,7 @@
 package com.hendisantika.entity;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-@JacksonXmlRootElement(localName="company-info", namespace="com.concretepage")
+@JacksonXmlRootElement(localName="company-info", namespace="com.hendisantika")
 public class Company {
 	@JacksonXmlProperty(localName="id", isAttribute=true)
 	private Integer id;

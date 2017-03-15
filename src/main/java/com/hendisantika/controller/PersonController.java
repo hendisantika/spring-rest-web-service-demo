@@ -21,7 +21,7 @@ import com.hendisantika.entity.Person;
 public class PersonController {
 	@RequestMapping(value= "/fetchjson/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Person getForObjectJsonDemo(@PathVariable(value = "id") Integer id) {
-		Address address = new Address("Dhananjaypur","Varanasi", "UP");
+		Address address = new Address("Jawa Barat","Cimahi", "UP");
 		return new Person(id,"Ram", address);
 	}
 	@RequestMapping(value= "/fetchxml/{id}", produces = MediaType.APPLICATION_XML_VALUE)
@@ -36,13 +36,13 @@ public class PersonController {
 	@RequestMapping("/fetch/{name}/{village}")
 	public Person getPersonDetail(@PathVariable(value = "name") String name,
 			                                    @PathVariable(value = "village") String village) {
-		Address address = new Address(village, "Varanasi", "UP");
+		Address address = new Address(village, "Cimahi", "UP");
 		return new Person(100,name, address);
 	}
 	@RequestMapping(value="/exchange/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Person> exchangeData(@PathVariable(value = "id") Integer id) {
-		Address address = new Address("Dhananjaypur", "Varanasi", "UP");
-		Person person = new Person(id,"Mahesh", address);
+		Address address = new Address("Jawa Barat", "Cimahi", "UP");
+		Person person = new Person(id,"Hendi", address);
 		return new ResponseEntity<Person>(person, HttpStatus.OK);
 	}	
 	@RequestMapping(value="/delete/{name}/{village}", method = RequestMethod.DELETE)
