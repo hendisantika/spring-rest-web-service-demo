@@ -18,7 +18,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.18.2'
     implementation 'org.codehaus.woodstox:woodstox-core-asl:4.4.1'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:3.4.0'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:3.4.1'
     runtimeOnly 'com.h2database:h2'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
